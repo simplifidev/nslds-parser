@@ -1,7 +1,6 @@
 # nslds-parser
 This module parses data obtained from the National Student Loan Data System found at https://www.nslds.ed.gov/nslds_SA/.
 
-[![NPM](https://nodei.co/npm/nslds-parser.png)](https://nodei.co/npm/nslds-parser/)
 
 # JavaScript Usage
 
