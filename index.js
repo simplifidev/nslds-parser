@@ -24,17 +24,3 @@ NSLDSParser.prototype.parseStream = function(readStream) {
   }
   return readStream.pipe(csv(options)).pipe(formatData(self.opts.format))
 }
-
-var argv = minimist(process.argv.slice(2));
-var filename = argv._[2]
-if (!argv.format) argv.format = 'ndjson'
-
-var parser = new NSLDSParser({
-  format: argv.format
-})
-
-var stream;
-if (filename) stream = parser.parseFile(filename)
-else stream = parser.parseStream(process.stdin)
-
-stream.pipe(process.stdout)
