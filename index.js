@@ -19,7 +19,7 @@ NSLDSParser.prototype.parseFile = function(filename) {
 NSLDSParser.prototype.parseStream = function(readStream) {
   var self = this
   var options = {
-    separator: ':',
+    separator: ',',
     headers: ['key', 'value']
   }
   return readStream.pipe(csv(options)).pipe(formatData(self.opts.format))
